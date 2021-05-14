@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.3.2/bootbox.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+    
+    <title>Homepage</title>
+
+    <style>
+        body {
+            font-family: Georgia;
+        }
+
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .eximage {
+            height: 200px;
+            background-color: darkgray;
+        }
+
+
+        .headerBG {
+            font-family: georgia;
+            margin-bottom: 0;
+            background-color: #D5CFCC;
+            text-align: center;
+        }
+
+        .bgText {
+            font-family: georgia;
+            background-color: #D5CFCC;
+
+        }
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-1 {
+            
+            height: 100%;
+        }
+
+        .btn {
+            width: 150px;
+            text-align: center;
+            font-family: cursive;
+        }
+
+        #textarea {
+            background-color: darkgrey;
+           
+        }
+
+        #h {
+            text-align: center;
+        }
+        #myTable{
+            background-color: azure;
+        }
+        th.dt-center,
+        td.dt-center {
+            text-align: center;
+        }
+        #smile{
+            color: gold;
+            font-size: 30px;
+        }
+
+    </style>
+    <script>
+            $(document).ready(function () {
+                var dataSet = [
+                    {
+                        "Day": "1.Monday",
+                        "Docname": 1,
+                        "Docname2": 0,
+                        "Docname3": 1,
+                        "Docname4": 1
+                    },
+                    {
+                        "Day": "2.Tuesday",
+                        "Docname": 1,
+                        "Docname2": 0,
+                        "Docname3": 1,
+                        "Docname4": 1
+                    },
+                    {
+                        "Day": "3.Wednesday",
+                        "Docname": 1,
+                        "Docname2": 0,
+                        "Docname3": 1,
+                        "Docname4": 1
+                    },
+                    {
+                        "Day": "4.Thursday",
+                        "Docname": 0,
+                        "Docname2": 1,
+                        "Docname3": 1,
+                        "Docname4": 1
+                    },
+                    {
+                        "Day": "5.Friday",
+                        "Docname": 1,
+                        "Docname2": 0,
+                        "Docname3": 1,
+                        "Docname4": 1
+                    },
+                    {
+                        "Day": "6.Saturday",
+                        "Docname": 1,
+                        "Docname2": 0,
+                        "Docname3": 0,
+                        "Docname4": 0
+                    },
+                    {
+                        "Day": "7.Sunday",
+                        "Docname": 0, 
+                        "Docname2": 0,
+                        "Docname3": 0,
+                        "Docname4": 0
+                    }
+                ];
+    
+                $('#myTable').DataTable({
+                    responsive: true,       //for responsive column display
+                    deferRender: false,      //if large data, use this option
+                    data: dataSet,
+                    columns: [
+                        { data:"Day",title: "DAY"  },
+                        { data: "Docname", title: "08.00-10.00",
+                        render: function (data, type, row) {
+                                let btt = "<button id='time1' class='btn btn-outline-primary'>Available</button>";
+                                if (data == 0) {
+                                    btt = "<p class='text-danger'>Not available</p>";
+                                }
+                                return btt;
+                                
+                            }
+                        },
+                        { data: "Docname2", title: "10.30-12.30" ,
+                        render: function (data, type, row) {
+                                let btt = "<button id='time2' class='btn btn-outline-primary'>Available</button>";
+                                if (data == 0) {
+                                    btt = "<p class='text-danger'>Not available</p>";
+                                }
+                                return btt;
+                            }
+                        },
+                        { data: "Docname3", title: "13.00-15.00" ,
+                        render: function (data, type, row) {
+                                let btt = "<button id='time3' class='btn btn-outline-primary'>Available</button>";
+                                if (data == 0) {
+                                    btt = "<p class='text-danger'>Not available</p>";
+                                }
+                                return btt;
+                            }
+                        },
+                        { data: "Docname4", title: "15.30-17.30" ,
+                        render: function (data, type, row) {
+                                let btt = "<button id='time4' class='btn btn-outline-primary'>Available</button>";
+                                if (data == 0) {
+                                    btt = "<p class='text-danger'>Not available</p>";
+                                }
+                                return btt;
+                            }
+                        },
+                       
+                       
+                    ],
+                    columnDefs: [
+                        // make the last column align right, also target: "_all"
+                        { "className": "dt-center", "targets": 4}
+                    ]
+                    
+                    
+    
+                });
+                $('#myTable tbody').on("click", "#time1", function () {
+                    let time = $("#time").val("time1");
+                    $("#timetext").html("Time: 08.00-10.00");
+                    $("#modalEdit").modal("show");
+                } );
+
+                $('#myTable tbody').on("click", "#time2", function () {
+                    let time = $("#time").val("time2");
+                    $("#timetext").html("Time: 10.30-12.30");
+                    $("#modalEdit").modal("show");
+                } );
+
+                $('#myTable tbody').on("click", "#time3", function () {
+                    let time = $("#time").val("time3");
+                    $("#timetext").html("Time: 13.00-15.00");
+                    $("#modalEdit").modal("show");
+                } );
+
+                $('#myTable tbody').on("click", "#time4", function () {
+                    let time = $("#time").val("time4");
+                    $("#timetext").html("Time: 15.30-17.30");
+                    $("#modalEdit").modal("show");
+                } );
+    
+                $("#bttn").click(function () { 
+                
+                window.location.replace("./yourdoctor");
+            });
+
+            $("#btnSave").click(function (){
+                $("#modalEdit").modal("hide");
+                $("#modalS").modal("show");
+                $("#greserve").click(function (){
+                    window.location.replace("./myinfo")
+                });
+
+            } );
+    
+            });
+            
+    
+        
+        </script>
+    
+
+
+</head>
+
+<body>
+        <div class="jumbotron jumbotron-fluid text-center headerBG" style="background-image: url('Pic/background2.png');">
+                <div class="container" >
+                            <h1 class="display-2" style="color: azure;"> Apointment schedule</h1>
+                            <h1 class="display-4" style="color: azure;"> Dr.Gomez Dan</h5>
+                         
+                </div>
+            </div>
+
+
+            <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+                <a class="navbar-brand" href="home">
+                    <img src="Pic/health.png" alt="no">
+                </a>
+        
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+        
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                        </li>
+        
+                </div>
+        
+        
+                <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+        
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="yourdoctor">Personal Consultation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="room">Consultation Room</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="myinfo">My Activity</a>
+                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                               <img src="Pic/user.png" alt="user"> 
+                            </li>
+                        
+                        </ul>
+                </div>
+            </nav>
+
+
+    <div class="bgimg-1">
+
+        <br>
+        
+
+        
+        
+           
+            <table id="myTable" class="table  table-striped table-bordered " style="width:100%">
+                </table>
+        
+            
+                <div class="text-center">
+                        <button class="btn btn-primary mb-4" id="bttn">Back</button>
+                    </div>
+        
+
+
+                    <div class="modal fade" id="modalEdit">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="modelTitleId">Make apointment</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Name Patient
+                                        <input type="text" class="form-control mb-1" id="txtName">
+                                        <h6 id="timetext"></h6> 
+                                        Date
+                                        <input type="date" class="form-control my-1" id="date">
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button id="btnSave" type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                           <!-- -------------------------------------- MODAL ------------------------------------- -->
+             <div class="modal fade" id="modalS" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+             aria-hidden="true">
+             <div class="modal-dialog" role="document">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h5 class="modal-title">Notification</h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button>
+                     </div>
+                     <br>
+                     <h4 class="text-info text-center">MAKING APPOINTMENT SUCCESSFUL.</h4>
+                     <br>
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal" id="greserve">Close</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     <!-- -------------------------------------- ------ ------------------------------------- -->
+
+        <!-- footer -->
+        <footer class="bg-dark">
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center padding">
+                    <div class="col-12">
+                        <h2>Connect</h2>
+                    </div>
+                    <div class="col-12 social padding">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Contact</h5>
+                        <p>012-345-6789</p>
+                        <p>smilebytu@contact.com</p>
+                        <p>Thailand</p>
+                        <p>City 57100</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Our Service</h5>
+                        <hr class="light">
+                        <p>Counseling</p>
+                        <p>Stress test</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Service Area</h5>
+                        <hr class="light">
+                        <p>Thailand</p>
+
+                    </div>
+                    <div class="col-12">
+                        <hr class="light-100">
+                        <h5>&copy; Smile BY TU 🗣️</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

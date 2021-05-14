@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.3.2/bootbox.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+    
+    <title>Homepage</title>
+
+    <style>
+        body {
+            font-family: Georgia;
+        }
+
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .eximage {
+            height: 200px;
+            background-color: darkgray;
+        }
+
+
+        .headerBG {
+            font-family: georgia;
+            margin-bottom: 0;
+            background-color: #D5CFCC;
+            text-align: center;
+        }
+
+        .bgText {
+            font-family: georgia;
+            background-color: #D5CFCC;
+
+        }
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-1 {
+            
+            height: 100%;
+        }
+
+        .btn {
+            width: 150px;
+            text-align: center;
+            font-family: cursive;
+        }
+
+        #textarea {
+            background-color: darkgrey;
+           
+        }
+
+        #h {
+            text-align: center;
+        }
+        #myTable{
+            background-color: azure;
+        }
+        th.dt-center,
+        td.dt-center {
+            text-align: center;
+        }
+        #smile{
+            color: gold;
+            font-size: 30px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btnS").click(function (){
+                $("#modalS").modal("show");
+                $("#g").click(function() {
+                    window.location.replace("./doct");
+                });
+            } );
+        });
+      
+    
+    </script>
+    
+
+
+</head>
+
+<body>
+        <div class="jumbotron jumbotron-fluid text-center headerBG" style="background-image: url('Pic/background2.png');">
+                <div class="container" >
+                            <h1 class="display-2" style="color: azure;"> patient information update</h1>
+                            
+                         
+                </div>
+            </div>
+
+
+            <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+                <a class="navbar-brand" href="doct">
+                    <img src="Pic/health.png" alt="no">
+                </a>
+        
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+        
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
+                        <li class="nav-item active">
+                            <a class="nav-link" href="doct" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                        </li>
+        
+                </div>
+        
+        
+                <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+        
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                               <img src="Pic/user.png" alt="user"> 
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+
+
+    <div class="bgimg-1">
+
+        <br>
+        <div class="container">
+            <h3>Patient information</h3>
+            Patient Name
+            <input type="text" class="form-control mb-3" id="txtname">
+            <!-- check box -->
+            Gender
+            <div class="form-group mb-2">
+                <div class="form-check-inline" >
+                    <input type="radio" name="gender" class="form-check-input" value="Male">Male<br>
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="gender" class="form-check-input" value="Female"> Female<br>
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="gender" class="form-check-input" value="Others" checked> Other<br>
+                </div>
+            </div>
+            Age
+            <input type="text" class="form-control mb-3" id="txtage">
+            Job
+            <input type="text" class="form-control mb-3" id="txtjob">
+            Symptom
+            <input type="text" class="form-control mb-3" id="txtsym">
+            Priority
+            <select name="selectYear" class="form-control mb-3" id="priority">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            
+            </select>
+
+
+            
+            
+          
+           
+            <!-- summit button -->
+            <div class="container text-center">
+            <button class="btn btn-primary my-3" id="btnS">Submit</button>
+            </div>
+            </div>
+    
+
+        
+
+             <!-- -------------------------------------- MODAL ------------------------------------- -->
+             <div class="modal fade" id="modalS" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+             aria-hidden="true">
+             <div class="modal-dialog" role="document">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h5 class="modal-title">Notification</h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button>
+                     </div>
+                     <br>
+                     <h4 class="text-info text-center">SUBMIT SUCCESSFUL.</h4>
+                     <br>
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal" id="g">Close</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     <!-- -------------------------------------- ------ ------------------------------------- -->
+
+        
+        
+           
+           
+        
+
+
+
+
+        <!-- footer -->
+        <footer class="bg-dark">
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center padding">
+                    <div class="col-12">
+                        <h2>Connect</h2>
+                    </div>
+                    <div class="col-12 social padding">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Contact</h5>
+                        <p>012-345-6789</p>
+                        <p>smilebytu@contact.com</p>
+                        <p>Thailand</p>
+                        <p>City 57100</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Our Service</h5>
+                        <hr class="light">
+                        <p>Counseling</p>
+                        <p>Stress test</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Service Area</h5>
+                        <hr class="light">
+                        <p>Thailand</p>
+
+                    </div>
+                    <div class="col-12">
+                        <hr class="light-100">
+                        <h5>&copy; Smile BY TU 🗣️</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

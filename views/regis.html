@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url('Pic/bg_health.jpg');
+        }
+        #r{
+            color:darkorchid;
+        }
+    </style>
+    <script>
+        // if (localStorage.username !== undefined) {
+
+        //     window.location.replace("./home.html");
+        // }
+        // //if not yet login
+        $(document).ready(function () {
+            $("button").click(function () {
+                //get inputs
+                let username = $("#txtname").val();
+                let password = $("#txtpass").val();
+                let conpassword = $("#txtconpass").val();
+                let email = $("#txtmail").val();
+                if (password == conpassword) {
+                    alert("Good");
+                }
+            window.location.replace("./");
+
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="r">Register</h2>
+        <img src="Pic/1.png" alt="nothing"><br>
+        Username:<input type="text" class="form-control my-2" placeholder="Username" id="txtname">
+        Password:<input type="password" class="form-control mb-2" placeholder="Password" id="txtpass">
+        Confirm Password:<input type="password" class="form-control mb-2" placeholder="Password" id="txtconpass">
+        Email:<input type="email" class="form-control my-2" placeholder="example@hotmail.com" id="txtmail">
+        <button class="btn btn-success my-2">Register</button>
+
+    </div>
+</body>
+
+</html>

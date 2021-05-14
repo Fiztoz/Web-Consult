@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>Homepage</title>
+
+    <style>
+        body {
+            font-family: Georgia;
+        }
+
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .eximage {
+            height: 200px;
+            background-color: darkgray;
+        }
+
+
+        .headerBG {
+            font-family: cursive;
+            margin-bottom: 0;
+            background-color: #D5CFCC;
+            text-align: center;
+        }
+
+        .bgText {
+            font-family: cursive;
+            background-color: #D5CFCC;
+
+        }
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-1 {
+            background-image:  url('background3.png');
+            height: 100%;
+        }
+
+        .btn {
+            width: 150px;
+            text-align: center;
+            font-family: cursive;
+        }
+
+        #textarea {
+            background-color: darkgrey;
+            font-family: cursive;
+        }
+
+        #h {
+            text-align: center;
+        }
+        #smile{
+            color: gold;
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".doc1").click(function () { 
+                window.location.replace("./checkdoc1");
+                
+            });
+            $(".doc2").click(function () { 
+                window.location.replace("./checkdoc2");
+                
+            });
+            $(".doc3").click(function () { 
+                window.location.replace("./checkdoc3");
+                
+            });
+            $(".doc4").click(function () { 
+                window.location.replace("./checkdoc4");
+                
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+        <div class="jumbotron jumbotron-fluid text-center headerBG" style="background-image:  url('Pic/background2.png'); font-family: georgia;">
+                <div class="container" >
+                            <h1 class="display-3" style="color: azure;"> Your professional counselor</h1>
+                         
+                </div>
+            </div>
+
+
+            <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+                <a class="navbar-brand" href="home">
+                    <img src="Pic/health.png" alt="no">
+                </a>
+        
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+        
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                        </li>
+        
+                </div>
+        
+        
+                <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+        
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="yourdoctor">Personal Consultation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="room">Consultation Room</a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                               <img src="Pic/user.png" alt="user"> 
+                            </li>
+                        
+                        </ul>
+                </div>
+            </nav>
+
+
+    <div class="bgimg-1">
+
+        <br>
+        <div class="container">
+            
+            
+            
+                    <div class="card my-4">
+                            <div class="card-header text-dark news-title">Dr.Fedrick Tan</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <img class="img-fluid" src="Pic/doctor2.png" alt="image news">
+                                       
+                                        </div>
+                                
+                                    
+                                    <div class="col-sm-10">
+                                      <p>Expert: Relationship ,Sex</p>
+                                      <p>Bachelor’s degree from the University of British Columbia in 1978 <br>
+                                         PhD in psychology from Stanford University in 1985.</p>
+                                      
+                                      <p>Consultation hour:Moday-Friday &Saturday and sunday:8.00-15.00pm</p>
+                                      <p>Apointments:  07-381 7811</p>
+                                      <p>Email address:Fed@gmail.com</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-footer">
+                                        <div >
+   
+                                           <h5 style="color: rgb(14, 107, 161);">Start at 800 bath per session(30 min)</h5>
+                                           
+                                       </div>
+                                    </div>
+
+                                
+                                <div class="card-footer">
+                                    
+                                        <button class="doc1 ml-4" style="color: rgb(14, 107, 161);">Appointments</button>
+                                    </div>
+                
+                            </div>
+                            
+                        </div>
+                        <div class="card my-4">
+                                <div class="card-header text-dark news-title">Dr.Marcos Ben</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <img class="img-fluid" src="Pic/doc3.jpg" alt="image news">
+                                        </div>
+                                        <div class="col-sm-10">
+                                         <p>Expert: Parenting</p>
+
+                                          <p>Bachelor’s degree in psychology in 1971 from Tel Aviv University. <br>
+                                             PhD in cognitive psychology in 1991 from the University of North Carolina at Chapel Hill.</p>
+                                          <p>Consultation hour:Moday-Friday &Saturday and sunday:8.00-15.00pm</p>
+                                          <p>Apointments:  07-485 5856</p>
+                                          <p>Email address:Ben@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                            <div >
+       
+                                               <h5 style="color: rgb(14, 107, 161);">Start at 1000 bath per session(30 min)</h5>
+                                               
+                                           </div>
+                                        </div>
+                                    <div class="card-footer">
+                                            <button class="doc2 ml-4" style="color: rgb(14, 107, 161);">Appointment</button>
+                                        </div>
+                    
+                                </div>
+                                
+                            </div>
+                            <div class="card my-4">
+                                    <div class="card-header text-dark news-title">Dr.David james</div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <img class="img-fluid" src="Pic/doc4.jpg" alt="image news">
+                                            </div>
+                                            <div class="col-sm-10">
+                                            <p>Expert: Stress</p>
+                                              <p> Bachelor’s degree from Brandeis University in 1975. <br>
+                                                  Master’s degree from Wesleyan University in 1978. <br>
+                                                  PhD in 1980 from Stanford University</p>
+                                              <p>Consultation hour:Moday-Friday &Saturday and sunday:8.00-15.00pm</p>
+                                              <p>Apointments:  09-251 5564</p>
+                                              <p>Email address:James@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                                <div >
+           
+                                                   <h5 style="color: rgb(14, 107, 161);">Start at 900 bath per session(30 min)</h5>
+                                                   
+                                               </div>
+                                            </div>
+                                        <div class="card-footer" > 
+                                                <button class="doc3 ml-4" style="color: rgb(14, 107, 161);">Appointment</button>
+                                            </div>
+                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="card my-4">
+                                        <div class="card-header text-dark news-title">Dr.Gomez Dan</div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <img class="img-fluid" src="Pic/doc2.jpg" alt="image news">
+                                                </div>
+                                                <div class="col-sm-10">
+                                                        <p>Expert:Depression</p>
+                                                  <p> Bachelor’s degree in 1956 from University College London <br>
+                                                      master’s degree in psychology in 1970 from Princeton University <br>
+                                                      PhD at the University of Cambridge in 1980.</p>
+                                                  <p>Consultation hour:Moday-Friday &Saturday and sunday:8.00-15.00pm</p>
+                                                  <p>Apointments:  08-456 2954</p>
+                                                  <p>Email address:Gomez@gmail.com</p>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                    <div >
+               
+                                                       <h5 style="color: rgb(14, 107, 161);">Start at 700 bath per session(30 min)</h5>
+                                                       
+                                                   </div>
+                                                </div>
+                                            <div class="card-footer" >
+                                                    <button class="doc4 ml-4" style="color: rgb(14, 107, 161);">Appointment</button>
+                                                </div>
+                            
+                                        </div>
+                                        
+                                    </div>
+        
+        
+    
+            
+        </div>
+
+
+
+
+        <!-- footer -->
+        <footer class="bg-dark">
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center padding">
+                    <div class="col-12">
+                        <h2>Connect</h2>
+                    </div>
+                    <div class="col-12 social padding">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Contact</h5>
+                        <p>012-345-6789</p>
+                        <p>smilebytu@contact.com</p>
+                        <p>Thailand</p>
+                        <p>City 57100</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Our Service</h5>
+                        <hr class="light">
+                        <p>Counseling</p>
+                        <p>Stress test</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Service Area</h5>
+                        <hr class="light">
+                        <p>Thailand</p>
+
+                    </div>
+                    <div class="col-12">
+                        <hr class="light-100">
+                        <h5>&copy; Smile BY TU 🗣️</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

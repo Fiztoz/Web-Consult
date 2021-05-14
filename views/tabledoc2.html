@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.3.2/bootbox.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+    
+    <title>Homepage</title>
+
+    <style>
+        body {
+            font-family: Georgia;
+        }
+
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .eximage {
+            height: 200px;
+            background-color: darkgray;
+        }
+
+
+        .headerBG {
+            font-family: georgia;
+            margin-bottom: 0;
+            background-color: #D5CFCC;
+            text-align: center;
+        }
+
+        .bgText {
+            font-family: georgia;
+            background-color: #D5CFCC;
+
+        }
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-1 {
+            
+            height: 100%;
+        }
+
+        .btn {
+            width: 150px;
+            text-align: center;
+            font-family: cursive;
+        }
+
+        #textarea {
+            background-color: darkgrey;
+           
+        }
+
+        #h {
+            text-align: center;
+        }
+        #myTable{
+            background-color: azure;
+        }
+        th.dt-center,
+        td.dt-center {
+            text-align: center;
+        }
+        #smile{
+            color: gold;
+            font-size: 30px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            var dataSet = [
+                {
+                    "Day": "1.Monday",
+                    "Docname": "Tom Morin",
+                    "Docname2": " ",
+                    "Docname3": " ",
+                    "Docname4": "Albert Ratliff"
+                },
+                {
+                    "Day": "2.Tuesday",
+                    "Docname": " ",
+                    "Docname2": "",
+                    "Docname3": "Aubrey Moody",
+                    "Docname4": "Ridwan Harris"
+                },
+                {
+                    "Day": "3.Wednesday",
+                    "Docname": "Calvin Churchill",
+                    "Docname2": " ",
+                    "Docname3": "Lennon Aguirre",
+                    "Docname4": " "
+                },
+                {
+                    "Day": "4.Thursday",
+                    "Docname": "",
+                    "Docname2": " ",
+                    "Docname3": "Victoria Bright",
+                    "Docname4": "Tamar Spence"
+                },
+                {
+                    "Day": "5.Friday",
+                    "Docname": "",
+                    "Docname2": "Varun Sherman",
+                    "Docname3": "Katy Ball",
+                    "Docname4": " "
+                },
+                {
+                    "Day": "6.Saturday",
+                    "Docname": " ",
+                    "Docname2": "Henley Prince",
+                    "Docname3": "Jarrod Vega",
+                    "Docname4": "Emmett Rosas"
+                },
+                {
+                    "Day": "7.Sunday",
+                    "Docname": " ",
+                    "Docname2": " ",
+                    "Docname3": " ",
+                    "Docname4": "Vivienne Rose"
+                }
+            ];
+
+            $('#myTable').DataTable({
+                responsive: true,       //for responsive column display
+                deferRender: false,      //if large data, use this option
+                data: dataSet,
+                columns: [
+                    { data: "Day", title: "DAY" },
+                    { data: "Docname", title: "08.00-10.00" },
+                    { data: "Docname2", title: "10.30-12.30" },
+                    { data: "Docname3", title: "13.00-15.00" },
+                    { data: "Docname4", title: "15.30-17.30" }
+                ]
+                
+
+            });
+        });
+
+    
+    </script>
+    
+
+
+</head>
+
+<body>
+        <div class="jumbotron jumbotron-fluid text-center headerBG" style="background-image: url('Pic/background2.png');">
+                <div class="container" >
+                            <h1 class="display-2" style="color: azure;"> Apointment schedule</h1>
+                            <h1 class="display-4" style="color: azure;"> Dr.Marcos Ben</h5>
+                         
+                </div>
+            </div>
+
+
+            <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+                <a class="navbar-brand" href="doct">
+                    <img src="Pic/health.png" alt="no">
+                </a>
+        
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+        
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
+                        <li class="nav-item active">
+                            <a class="nav-link" href="doct" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                        </li>
+        
+                </div>
+        
+        
+                <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+        
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                               <img src="Pic/user.png" alt="user"> 
+                            </li>
+                        
+                        </ul>
+                </div>
+            </nav>
+
+
+    <div class="bgimg-1">
+
+        <br>
+        
+
+        
+        
+           
+            <table id="myTable" class="table  table-striped table-bordered " style="width:100%">
+                </table>
+        
+            
+        
+        
+
+
+
+
+        <!-- footer -->
+        <footer class="bg-dark">
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center padding">
+                    <div class="col-12">
+                        <h2>Connect</h2>
+                    </div>
+                    <div class="col-12 social padding">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Contact</h5>
+                        <p>012-345-6789</p>
+                        <p>smilebytu@contact.com</p>
+                        <p>Thailand</p>
+                        <p>City 57100</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Our Service</h5>
+                        <hr class="light">
+                        <p>Counseling</p>
+                        <p>Stress test</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Service Area</h5>
+                        <hr class="light">
+                        <p>Thailand</p>
+
+                    </div>
+                    <div class="col-12">
+                        <hr class="light-100">
+                        <h5>&copy; Smile BY TU 🗣️</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <title>Project</title>
+
+    <link href="source/style.css" rel="stylesheet">
+    <script src="source/table.js" async></script>
+
+    <style>
+    .btns{
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid bg-info mb-0 Atext">
+        <div class="container-fluid">
+                    <h2 class="display-5 text-center"><b>Welcome for our Counseling  Group</b></h2>
+                    <h5 class="display-5 text-center"><b>"A time to be heard"</b></h5>
+        </div>
+
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+    <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+            <a class="navbar-brand" href="home">
+                <img src="Pic/health.png" alt="no">
+            </a>
+    
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+    
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                    </li>
+    
+            </div>
+    
+    
+            <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+    
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="yourdoctor">Personal Consultation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="room">Consultation Room</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="myinfo">My Activity</a>
+            </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Logout</a>
+                    </li>
+                            <li class="nav-item">
+                                   <img src="Pic/user.png" alt="user"> 
+                                </li>
+                            
+                            </ul>
+            </div>
+        </nav>
+
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <p class="mt-4 text-center" style="font-size: 30px;">Let us know about your problem</p>
+                    <input type="text" placeholder="Problems that needed for consultation" id="probtxt" class="form-control my-2">
+                    
+                    <p class="mt-4 text-center" style="font-size: 30px;">Time for consultation</p>
+
+                    <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"> 
+                    <p class="mt-4" style="font-size: 30px;">Session</p>
+                    <select class="form-control search-slt" id="ses">
+                            <option value="0">Select the Session</option>
+                            <option value="1">1st Session</option>
+                            <option value="2">2nd Session</option>
+                            <option value="3">3rd Session</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                            <p class="mt-4" style="font-size: 30px;">Date</p>
+                            <input type="date" id="date">                        
+                        </div>
+                        <div class="col-md-3"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                    <div class="col-md-12 ">
+                    <button id="btnSub" class="btn btn-info mt-4 btns">SUBMIT</button>
+                    <br>
+                    <div class="alert alert-success mt-2" id="alertsuc" style="display: none">
+                            <strong>Thank You !!!</strong> We will sent the link of your group to your email later.
+                        </div>
+                    <div class="alert alert-danger mt-2" id="alerterr" style="display: none">
+                            <strong>Error !!!</strong> Please fill the information complately.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-md-4 mb-0">  
+                    <img src="Pic/doctor.jpg" alt="Nothing">
+
+                </div>
+                <!-- Right Column -->
+                <div class="col-md-8">
+            </div>
+            
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+         <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- footer -->
+    <footer class="bg-dark">
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center padding">
+                    <div class="col-12">
+                        <h2>Connect</h2>
+                    </div>
+                    <div class="col-12 social padding">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Contact</h5>
+                        <p>012-345-6789</p>
+                        <p>smilebytu@contact.com</p>
+                        <p>Thailand</p>
+                        <p>City 57100</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Our Service</h5>
+                        <hr class="light">
+                        <p>Counseling</p>
+                        <p>Stress test</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Service Area</h5>
+                        <hr class="light">
+                        <p>Thailand</p>
+
+                    </div>
+                    <div class="col-12">
+                        <hr class="light-100">
+                        <h5>&copy; Smile BY TU 🗣️</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>

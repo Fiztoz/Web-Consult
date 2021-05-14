@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>Homepage</title>
+
+    <style>
+        body{
+            font-family: cursive;
+        }
+        .jumbotron {
+        margin-bottom: 0;
+        }
+        .eximage{
+        height: 200px;
+        background-color: darkgray;
+        }
+
+
+        .headerBG{
+            font-family: cursive;
+            margin-bottom: 0;
+            background-color: #D5CFCC;
+            text-align: center;
+            }
+
+        .bgText{
+        font-family: cursive;
+        background-color: #D5CFCC;
+
+        }
+
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        .bgimg-1 {
+        background-image: url("Pic/forest\ book.jpg");
+        height: 100%;
+        }
+       
+        .btn{
+            width: 150px;
+            text-align: center;
+            font-family: cursive;
+        }
+        #textarea{
+            background-color: darkgrey;
+            font-family: cursive;
+        }
+        #smile{
+            color: gold;
+            font-size: 30px;
+        }
+
+
+        
+
+        
+            
+    </style>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#pub").click(function (){
+                $("#modalP").modal("show");
+            } );
+
+
+        });
+      
+    
+    </script>
+
+</head>
+
+<body>
+    
+
+    <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+        <a class="navbar-brand" href="admin">
+            <img src="Pic/health.png" alt="no">
+        </a>
+
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="admin" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                </li>
+
+        </div>  
+
+
+        <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Logout</a>
+                </li>
+                <li class="nav-item">
+                       <img src="Pic/user.png" alt="user"> 
+                    </li>
+                
+                </ul>
+        </div>
+    </nav>
+
+
+    <div class="bgimg-1">
+
+            <br>
+            <div class="container">
+                    <div class="jumbotron">
+                        <div class="container">
+                            <h2 style="text-align: center;">Content</h2>
+                            <br>
+                                    <h4>Title</h4>
+                                    <input type="text" placeholder="Title">
+                                    <h4>Author</h4>
+                                    <input type="text" placeholder="Author">                            
+                                    <div class="form-group mt-2">
+                                            <h4>Upload the picture</h4>
+                                            <input type="file" name="fileupload">
+                                            <br>
+                                            <!-- <input type="submit" class="btn btn-secondary mb-2 mt-2" value="Upload"> -->
+                                            <br>
+                                        <textarea  id="textarea" cols="103" rows="10">
+                                            
+                                        </textarea>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                    <button class="btn btn-lg btn-primary btn-block text-uppercase" id="pub" type="submit">Publish</button>
+                                    </div>        
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+
+                <!-- -------------------------------------- MODAL ------------------------------------- -->
+ <div class="modal fade" id="modalP" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title">Notification</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <br>
+         <h4 class="text-info text-center">PUBLISH SUCCESSFUL.</h4>
+         <br>
+         <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         </div>
+     </div>
+ </div>
+</div>
+<!-- -------------------------------------- ------ ------------------------------------- -->
+
+
+</body>
+
+</html>

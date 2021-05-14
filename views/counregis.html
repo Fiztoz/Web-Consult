@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/localization/messages_th.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <title>Project</title>
+
+    <link href="source/style.css" rel="stylesheet">
+    <script src="source/request.js" async></script>
+
+
+    <style>
+        .errorMessage {
+            color: red;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnC").click(function (){
+                $("#modalC").modal("show");
+                $("#g").click(function (){
+                    window.location.replace("./admin")
+                });
+
+            } );
+
+            $("#btnIm").click(function (){
+                $("#modalIm").modal("show");
+        
+            });
+
+
+
+            $("form").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 8
+                    },
+                    password: {
+                        required: true,
+                        minlength: 4
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    tel: {
+                        required: true,
+                        maxlength: 10,
+                        mobile: true
+                    },
+                    date: {
+                        required: true,
+                        date: true
+                    },
+                    age: {
+                        required: true,
+                        min: 6
+                    }
+                },
+                errorClass: "errorMessage"
+            });
+
+            //custom validation method
+            jQuery.validator.addMethod("mobile", function (value, element) {
+                return this.optional(element) || /[0]{1}[0-9]{9}/.test(value);
+            }, "โปรดระบุหมายเลขโทรศัพท์เคลื่อนที่ 10 หลัก ขึ้นต้นด้วย 0");
+
+        });
+      
+    
+    </script>
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid bg-info mb-0 Atext">
+        <div class="container-fluid">
+                    <h2 class="display-4">Counselor Registeration</h2>
+        </div>
+
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+        <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+            <a class="navbar-brand" href="admin">
+                <img src="Pic/health.png" alt="no">
+            </a>
+    
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+    
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="admin" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                    </li>
+    
+            </div>
+    
+    
+            <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+    
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="doct">
+                           <img src="Pic/user.png" alt="user"> 
+                           </a>
+                        </li>
+                    
+                    </ul>
+            </div>
+        </nav>
+
+
+
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+    
+    <div class="bgimg-0">
+            <div class="container p-3">
+                <form>
+                    <div>Email</div>
+                    <input name="email" type="email" class="form-control mb-3" placeholder="Email">
+                    <div>Password (at least 4 characters)</div>
+                    <input name="password" type="password" class="form-control mb-3" placeholder="Password">
+                    <div>Mobile Number 10 digits (0xxxxxxxxx)</div>
+                    <input name="tel" type="text" class="form-control mb-3" placeholder="Mobile no.">
+                    <div>Gender</div>
+                    <p>
+                        <input type="radio" name="gender" value="female" checked> Female
+                        <input type="radio" name="gender" value="male"> Male
+                    </p>
+                </form>
+                    <!-- Textarea -->
+                    <h4 class="mt-3">Counselor Info</h4>
+                    <textarea id="txtAddress" rows="3" class="form-control"></textarea>
+                    <br>
+                    <br>
+                    <button id="btnC" class="btn btn-primary my-3">Confirm</button>
+            </div>
+    </div>
+
+
+
+     <!-- -------------------------------------- MODAL ------------------------------------- -->      
+     <div id="modalIm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+     aria-hidden="true">
+             <div class="modal-dialog" role="document">
+              <div class="modal-content">
+               <div class="modal-header">
+                <h5 class="modal-title pull-left">Upload Image File</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+              
+               <div class="modal-body">
+                <form id="image_form" method="post" enctype="multipart/form-data" disabled>
+                 <p><label>Select File</label>
+                 <input type="file" name="image" id="image"/></p><br />
+                 <input type="hidden" name="action" id="action" value="insert"/>
+                 <input type="hidden" name="image_id" id="image_id"/>
+                 <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-info" disabled/>
+                </form>
+               </div>
+
+               <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+              </div>
+             </div>
+            </div>
+<!-- -------------------------------------- ------ ------------------------------------- -->   
+
+ <!-- -------------------------------------- MODAL ------------------------------------- -->
+ <div class="modal fade" id="modalC" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title">Notification</h5>
+         </div>
+         <br>
+         <h4 class="text-info text-center">REGISTERATION SUCCESSFUL.</h4>
+         <br>
+         <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal" id="g">Close</button>
+         </div>
+     </div>
+ </div>
+</div>
+<!-- -------------------------------------- ------ ------------------------------------- -->
+
+</body>
+
+</html>

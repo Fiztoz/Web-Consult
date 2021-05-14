@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>Homepage</title>
+
+    <style>
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .eximage {
+            height: 200px;
+            background-color: darkgray;
+        }
+
+
+        .headerBG {
+            font-family: cursive;
+            margin-bottom: 0;
+            background-image: url("Pic/b-doc.v1.jpg");
+            color: rgb(255, 217, 0);
+        }
+
+        .bgText {
+            font-family: cursive;
+            background-color: #D5CFCC;
+
+        }
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-1 {
+            background-image: url("Pic/forest\ book.jpg");
+            height: 100%;
+        }
+
+        #news1 {
+            background-image: url(dog.jpg);
+        }
+
+        #banong {
+
+            text-align: left;
+        }
+
+        #psy1 {
+            background-color: royalblue;
+        }
+
+        #psy2 {
+            background-color: salmon;
+        }
+
+        #psy1detail {
+            text-align: left;
+            color: darkblue;
+        }
+
+        #psy2detail {
+            text-align: left;
+            color: rgb(175, 52, 118);
+        }
+        #smile{
+            color: gold;
+            font-size: 30px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+        <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+            <a class="navbar-brand" href="home">
+                <img src="Pic/health.png" alt="no">
+            </a>
+
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                    </li>
+
+            </div>
+
+
+            <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="yourdoctor">Personal Consultation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="room">Consultation Room</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="myinfo">My Activity</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="Pic/user.png" alt="user"> 
+                        </li>
+                    
+                    </ul>
+            </div>
+        </nav>
+
+    <!-- //--------bbc-doc-with--poem---------// -->
+    <div class="jumbotron jumbotron-fluid text-center headerBG">
+        <div class="container">
+            <div class="df-row">
+                <div class="col-5" id="docbar">
+                    <h1 class="display-3" id="banong"> "We Strive To Provide
+                        A Relaxed atmosphere"
+                    </h1><br>
+                    <br>
+                    <h4>Your health is our top priority</h4>
+                    <a class="country-card" id="card"></a>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+        <br>
+        <!-- meet doctor -->
+        <div class="container">
+            <div class="row jumbotron bg-white text-center">
+                <p class="display-4"> MEET THE COUNSELOR</p>
+                <div class="container padding">
+                    <div class="row padding">
+
+                        <div class="col-lg-6" id="psy1">
+                            <h2 class="display-4" style="color: darkblue;">PERSONAL</h2>
+                            <br><br>
+                            <img src="Pic/BLUEDOC.png" alt="nothing">
+                            <br><br><br><br>
+                            <p style="color:gold;">Pricing and fee charged depend on selected provider.</p>
+                            <br><br><br>
+                            <a href="yourdoctor" class="btn btn-info">MAKE APPOINTMENT</a><br><br>
+                        </div>
+
+                        <div class="col-lg-6" id="psy2">
+                            <h2 class="display-4" style="color:rgb(202, 69, 140);">GROUP CONSULTATION</h2>
+                            <img src="Pic/PINKDOC.png" alt="nothing">
+                            <br><br><br>
+                            <p style="color: gold">Pricing and fee charged depend on selected provider.</p>
+                            <br><br><br>
+                            <a href="room" class="btn btn-danger">MAKE APPOINTMENT</a><br><br>
+                        </div>
+
+                    </div>
+                </div>
+                <hr class="my-4">
+            </div>
+        </div>
+        <br>
+
+
+
+
+
+        <!-- footer -->
+        <footer class="bg-dark">
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center padding">
+                    <div class="col-12">
+                        <h2>Connect</h2>
+                    </div>
+                    <div class="col-12 social padding">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid padding text-white">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Contact</h5>
+                        <p>012-345-6789</p>
+                        <p>smilebytu@contact.com</p>
+                        <p>Thailand</p>
+                        <p>City 57100</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Our Service</h5>
+                        <hr class="light">
+                        <p>Counseling</p>
+                        <p>Stress test</p>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <h5>Service Area</h5>
+                        <hr class="light">
+                        <p>Thailand</p>
+
+                    </div>
+                    <div class="col-12">
+                        <hr class="light-100">
+                        <h5>&copy; Smile BY TU 🗣️</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

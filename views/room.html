@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>Room</title>
+
+    <style>
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .eximage {
+            height: 200px;
+            background-color: darkgray;
+        }
+
+
+        .headerBG {
+            font-family: cursive;
+            margin-bottom: 0;
+            background-image: url("b-doc.v1.jpg");
+            color: rgb(255, 217, 0);
+        }
+
+        .bgText {
+            font-family: cursive;
+            background-color: #D5CFCC;
+
+        }
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-1 {
+            background-image: url("forest\ book.jpg");
+            height: 100%;
+        }
+        #banong {
+
+            text-align: left;
+        }
+        #smile {
+            color: gold;
+            font-size: 30px;
+        }
+    </style>
+    <script>
+       $(document).ready(function () {
+        $("#jroom").show();
+        $("#jroom2").hide();
+
+        $("#Ajoin").click(function() {
+        $("#jroom2").show();
+        $("#jroom").hide();
+        });
+
+        $("#btnconfirm").click(function () {
+
+            
+            let a = $("#RTopic").val();
+            let b = $("#RDate").val();
+            let c = $("#RTime").val();
+            if(a != "" && b != 0 && c != ""){
+                $("#alerterr").hide();
+                $("#myModal").modal("hide");
+                $("#modalR").modal("show");
+                
+            }
+            else{
+                $("#alerterr").show();
+            }
+            
+                });
+        $("#btnclose").click(function () {
+                $("#alerterr").hide();
+            });
+        
+        
+        $("#jroom").click(function () {
+                $("#modalJR").modal("show");
+        });
+
+        $("#jroom2").click(function () {
+                $("#modalAJR").modal("show");
+                $("#jroom").show();
+                $("#jroom2").hide();
+        });
+
+    });
+    </script>
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark  sticky-top bg-dark">
+
+        <a class="navbar-brand" href="home">
+            <img src="Pic/health.png" alt="no">
+        </a>
+
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse col-md-7" id="collapsibleNavId">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="home" id="smile">SMILE <span class="sr-only">(current)</span></a>
+                </li>
+
+        </div>
+
+
+        <div class="collapse navbar-collapse col-md-3.5" id="collapsibleNavId">
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="yourdoctor">Personal Consultation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="room">Consultation Room</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="myinfo">My Activity</a>
+        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <img src="Pic/user.png" alt="user">
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ------------news--------- -->
+
+    </div>
+    <div class="bgimg-1">
+
+        <br>
+        <div class="container padding">
+            
+            <div class="row padding">
+                <div class="col-md-10">
+                    <p class="display-4">SMILE ROOM</p>
+                </div>
+                <div class="col-md-2">
+                    <a href="schedule" class="btn btn-warning">Room schedules</a><br><br>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Request room</button>
+                </div>
+
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <div class="card">
+                        
+                        <img src="Pic/strong.jpg" class="card-img-top">
+                        <div class="card-body" style="background-color: coral;">
+                            <h4 class="display-5">ROOM 1 </h4>
+                            <p class="card-title">
+                                Topic: Relationship and Sex<br>
+                                conselor name: Hideo Koshima</p>
+                                Time: <br>
+                                👤: 1/8 
+                            <p class="card-text" style="text-align: center;">
+                        <button class="btn btn-dark bg-dark" data-toggle="modal" data-target="#join" id="Ajoin">JOIN ROOM</button>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="card">                        
+                        <img src="Pic/mei.jpg" class="card-img-top">
+                        <div class="card-body" style="background-color:plum;">
+                            <h4 class="card-title">
+                                Room 2 </h4>
+                                <p class="card-title">
+                                    Topic: Parenting<br>
+                                        conselor name: Aladin Dingdindon</p>
+                                        Time: <br>
+                                        👤: 8/8 
+                                <p class="card-text" style="text-align: center;">
+                        <button class="btn btn-dark bg-dark" data-toggle="modal" data-target="#join" disabled>JOIN ROOM</button>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-2">
+                    </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Pic/you.jpg" class="card-img-top">
+                        <div class="card-body" style="background-color:royalblue;">
+                            <h4 class="card-title">
+                                Room 3 </h4>
+                            <p class="card-title">
+                                Topic: Stress<br>
+                                conselor name: Sam Porter</p> 
+                                Time:<br>
+                                👤: 0/8 
+                            <p class="card-text" style="text-align: center;">
+                        <button class="btn btn-dark bg-dark" data-toggle="modal" data-target="#join">JOIN ROOM</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mt-3">
+                        <div class="card">
+                            <img src="Pic/hand.jpg" alt="nothning" class="card-img-top">
+                            <div class="card-body" style="background-color:seagreen;">
+                                <h4 class="card-title">
+                                    Room 4 </h4>
+                                    <p class="card-title">
+                                            Topic: Depression<br>
+                                            conselor name: Jame Porterson</p>
+                                            Time:<br>
+                                            👤: 0/8
+                                    <p class="card-text" style="text-align: center;">
+                                <button class="btn btn-dark bg-dark" data-toggle="modal" data-target="#join">JOIN ROOM</button>
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
+        <br>
+        <br>
+        <!-- modal -->
+        <div class="container">
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Request room</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+        
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                Topics:<input type="text" class="form-control" id="RTopic"><br>
+                                Date: <input type="date" class="form-control" id="RDate"><br>
+                                Time:<input type="time" class="form-control" id="RTime">
+                            </div>
+        
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" id="btnconfirm">Send</button>
+                                <button type="button" class="btn btn-danger" id="btnclose" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="alert alert-danger mt-2" id="alerterr" style="display: none">
+                                    <strong>Error !!!</strong> Please fill the information complately.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- -----join modal----- -->
+        <div class="container">
+                <!-- The Modal -->
+                <div class="modal" id="join">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Are you sure to join this room?</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+        
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                               
+                            </div>
+        
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" id="jroom" data-dismiss="modal">YES</button>
+                                <button type="button" class="btn btn-success" id="jroom2" data-dismiss="modal">YES</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">NO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+             <!-- -------------------------------------- MODAL ------------------------------------- -->
+             <div class="modal fade" id="modalR" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+             aria-hidden="true">
+             <div class="modal-dialog" role="document">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h5 class="modal-title">Notification</h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button>
+                     </div>
+                     <br>
+                     <h4 class="text-info text-center">REQUEST SUCCESSFUL.</h4>
+                     <br>
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     <!-- -------------------------------------- ------ ------------------------------------- -->
+
+     <!-- -------------------------------------- MODAL ------------------------------------- -->
+     <div class="modal fade" id="modalJR" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title">Notification</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <br>
+             <h4 class="text-success text-center">YOU JOINED THIS ROOM.</h4>
+             <br>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             </div>
+         </div>
+     </div>
+ </div>
+<!-- -------------------------------------- ------ ------------------------------------- -->
+
+ <!-- -------------------------------------- MODAL ------------------------------------- -->
+ <div class="modal fade" id="modalAJR" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title">Notification</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <br>
+         <h4 class="text-success text-center">YOU ALREADY JOINED THIS ROOM.</h4>
+         <br>
+         <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         </div>
+     </div>
+ </div>
+</div>
+<!-- -------------------------------------- ------ ------------------------------------- -->
+        
+</body>
+
+</html>

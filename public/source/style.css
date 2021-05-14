@@ -1,0 +1,50 @@
+
+ /* STYLE */
+
+
+ .jumbotron {
+  margin-bottom: 0;
+}
+.eximage{
+  height: 200px;
+  background-color: darkgray;
+}
+
+
+.headerBG{
+    font-family: cursive;
+    margin-bottom: 0;
+    background-color: #D5CFCC;
+    text-align: center;
+    }
+
+.bgText{
+  font-family: cursive;
+  background-color: #D5CFCC;
+
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("forest\ book.jpg");
+  height: 100%;
+}
+
+#smile{
+    color: gold;
+    font-size: 30px;
+}
+
+.clock {
+  color: #ff4747;
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+  letter-spacing: 5px;
+  margin-left: 50px;
+}
